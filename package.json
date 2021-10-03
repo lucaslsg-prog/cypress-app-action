@@ -1,0 +1,23 @@
+{
+  "name": "cypress-app-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucaslsg-prog/cypress-app-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucaslsg-prog/cypress-app-action/issues"
+  },
+  "homepage": "https://github.com/lucaslsg-prog/cypress-app-action#readme",
+  "devDependencies": {
+    "cypress": "^8.5.0"
+  }
+}
