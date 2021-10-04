@@ -23,3 +23,37 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// class SignUpPage {
+//     visit() {
+//       cy.visit('/');
+//     }
+//     insertUsername() {
+//         return cy.get('input[placeholder="Username"]');
+//     }
+   
+//     insertEmail() {
+//       return cy.get('input[placeholder="Email"]');
+//     }
+   
+//     insertPassword() {
+//         return cy.get('input[placeholder="Password"]');
+//     }
+
+//     submit() {
+//       const button = cy.get('.btn').contains("Sign in").should('be.visible');
+//       button.click();
+//     }
+// }
+   
+// export default SignUpPage;
+
+Cypress.Commands.add('login', (username, email, password) => {
+    
+    cy
+        .get('input[placeholder="Username"]').type(username)
+        .get('input[placeholder="Email"]').type(email)
+        .get('input[placeholder="Password"]').type(password)
+        .get('.btn').contains("Sign in").should('be.visible')
+        .click()   
+})
